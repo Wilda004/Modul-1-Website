@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.input-container {
+    display: flex; /* Gunakan flexbox untuk mengatur input dan tombol */
+    justify-content: space-between; /* Membuat jarak antara input dan tombol */
+    align-items: center; /* Rata tengah secara vertikal */
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Warna border default */
+    margin-right: 10px;
+    transition: border 0.3s; /* Menambahkan transisi halus */
+}
+
+/* Menambahkan efek saat input di-klik atau difokuskan */
+#taskInput:focus {
+    border: 1px solid #007BFF; /* Ganti warna border saat input diaktifkan */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Tambahkan efek glow jika diinginkan */
+    outline: none; /* Menghapus outline default browser */
+}
+#taskInput.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+button {
+    padding: 10px 15px; /* Mengubah padding untuk proporsional */
+    border: none; /* Menghapus border */
+    background-color: #007BFF; /* Warna background untuk tombol Add */
+    color: #fff;
+    border-radius: 10px; /* Sesuaikan radius untuk keseragaman */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Warna background saat hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+   border-radius: 10px;
+}
+
+li {
+    background-color: #a9e3f9; /* Ganti dengan warna latar belakang yang diinginkan */
+    color: #333333; /* Ganti warna teks, misalnya hitam atau sesuai keinginan */
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container {
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Rata tengah secara vertikal */
+}
+
+button.delete-btn, button.edit-btn {
+    background: none; /* Menghapus background */
+    border: none; /* Menghapus border */
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+button i {
+    font-size: 18px; /* Ukuran ikon */
+}
+
+button.delete-btn i {
+    color: #dc3545; /* Warna ikon tempat sampah */
+}
+
+button.edit-btn i {
+    color: #ffc107; /* Warna ikon pensil */
+}
+
+.button-container button {
+    margin-left: 3px; /* Menambah jarak antara tombol edit dan hapus */
+}
+/* *{
+    border: solid red;
+} */
